@@ -167,7 +167,7 @@ def main():
     if uploaded_file:
         if st.button("▶️ Run Prioritization"):
             df = pd.read_csv(uploaded_file)
-            df = df.head(3)
+            
             df_scored = generate_ranking_data(df)
 
             df_scored[['rank_score', 'Impact', 'Ease of Implementation', 'Reliability/Confidence/Resilience']] = df_scored.apply(
